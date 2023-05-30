@@ -1,3 +1,30 @@
+// VARIABLES
+:root {
+    --primary-hue: 220;
+
+    --color-gray-98: hsl(220deg 12% 98%);
+    --color-gray-95: hsl(220deg 12% 95%);
+    --color-gray-90: hsl(220deg 12% 90%);
+    --color-gray-80: hsl(220deg 12% 80%);
+    --color-gray-70: hsl(220deg 12% 70%);
+    --color-gray-40: hsl(220deg 12% 40%);
+    --color-gray-30: hsl(220deg 12% 30%);
+    --color-gray-20: hsl(220deg 12% 20%);
+    --color-gray-10: hsl(220deg 12% 10%);
+
+    --color-default-background: var(--color-gray-98);
+    --color-default-foreground: var(--color-gray-10);
+
+    --color-primary: hsl(var(--primary-hue) 100% 56%);
+    --color-primary-fade: hsl(var(--primary-hue) 100% 96%);
+    --color-primary-lighter: hsl(var(--primary-hue) 100% 60%);
+    --color-primary-darker: hsl(var(--primary-hue) 100% 52%);
+    --color-primary-opposite: var(--color-gray-98);
+
+    --full-width: 120rem;
+    --full-width-padding-inline: calc(max(100% - var(--full-width), 4rem) / 2);
+}
+
 * {
     box-sizing: border-box;
 }
@@ -13,8 +40,6 @@
         Courier, monospace;
 
     color-scheme: light;
-    --theme-accent: #006ce9;
-    --theme-text: #181818;
 }
 
 @media (min-width: 50em) {
@@ -24,26 +49,27 @@
 }
 
 body {
+    background: var(--color-default-background);
+    color: var(--color-default-foreground);
+
     display: flex;
     flex-direction: column;
+
     min-height: 100vh;
+
     font-family: var(--font-body);
-    font-size: 1rem;
-    font-size: clamp(0.9rem, 0.75rem + 0.375vw + var(--user-font-scale), 1rem);
+    font-size: 1.6rem;
     line-height: 1.5;
-    max-width: 100vw;
-    background: var(--theme-bg);
-    color: var(--theme-text);
 }
 
 main {
-    padding: 10px 20px;
-    max-width: 960px;
+    padding: 1rem 2rem;
+    max-width: var(--full-width);
     margin: 0 auto;
 }
 
 a {
-    color: var(--theme-accent);
+    color: var(--color-primary);
 }
 
 a:hover {
@@ -79,9 +105,15 @@ html {
     tab-size: 4;
     font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
         Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 62.5%;
 }
 
 body {
+    margin: 0;
     padding: 0;
     line-height: inherit;
+}
+
+footer {
+    margin-block-start: auto;
 }

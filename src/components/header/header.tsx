@@ -1,7 +1,6 @@
 import {component$, useStyles$} from '@builder.io/qwik';
 import {useLocation} from '@builder.io/qwik-city';
-import {QwikLogo} from '../icons/qwik';
-import styles from './header.css?inline';
+import styles from './header.scss?inline';
 
 export default component$(() => {
     useStyles$(styles);
@@ -11,7 +10,7 @@ export default component$(() => {
     return (
         <header>
             <a class="logo" href="/">
-                <QwikLogo />
+                Tips & Tricks for Web Development
             </a>
             <nav>
                 <a href="/docs" class={{active: url.pathname.startsWith('/docs')}}>

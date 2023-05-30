@@ -1,0 +1,38 @@
+header {
+    background-color: var(--color-default-background);
+
+    position: sticky;
+    inset-block-start: 0;
+    z-index: 11;
+
+    display: grid;
+    grid-template-columns: minmax(130px, auto) 1fr;
+    gap: 3rem;
+
+    padding: 1rem;
+    overflow: hidden;
+
+    a {
+        text-decoration: none;
+
+        &.logo {
+            display: block;
+
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+    }
+
+    nav {
+        text-align: right;
+
+        a {
+            display: inline-block;
+            padding: 5px 15px;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

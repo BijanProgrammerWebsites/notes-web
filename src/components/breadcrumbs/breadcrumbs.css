@@ -6,7 +6,7 @@ nav.breadcrumbs {
 nav.breadcrumbs > span {
     display: inline-block;
     padding: 5px 0;
-    font-size: 12px;
+    font-size: 1.2rem;
 }
 
 nav.breadcrumbs > span a {

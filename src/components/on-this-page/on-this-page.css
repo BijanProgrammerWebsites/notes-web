@@ -29,5 +29,5 @@
 }
 
 .on-this-page a:hover {
-    border-color: var(--theme-accent);
+    border-color: var(--color-primary);
 }
