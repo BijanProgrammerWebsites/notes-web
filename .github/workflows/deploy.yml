@@ -1,4 +1,4 @@
-name: Deployment Workflow
+name: Deploy
 on:
     push:
         branches: [master]
@@ -6,23 +6,18 @@ on:
 jobs:
     deploy:
         name: Deploy
-        runs-on: ubuntu-latest
+        runs-on: self-hosted
+
         steps:
-            - name: Establish a Connection to Server and Update Website
-              uses: appleboy/ssh-action@master
-              with:
-                  host: ${{secrets.SERVER_IP}}
-                  username: ${{secrets.SERVER_USERNAME}}
-                  key: ${{secrets.SSH_KEY}}
-                  port: ${{secrets.SERVER_PORT}}
-                  script_stop: true
-                  script: |
-                      cd /repos/notes-web
-                      git fetch
-                      git checkout master
-                      git reset --hard HEAD
-                      git pull origin master
-                      npm i
-                      npm run build
-                      rm -rf /var/notes/bijanprogrammer.com/html/web
-                      cp -a build/. /var/notes/bijanprogrammer.com/html/web
+            - uses: actions/checkout@v3
+
+            - name: Install Dependencies
+              run: npm i
+
+            - name: Build
+              run: npm run build
+
+            - name: Move Built Files to Corresponding Folder
+              run: |
+                  rm -rf /var/notes/bijanprogrammer.com/html/web
+                  cp -a build/. /var/notes/bijanprogrammer.com/html/web
