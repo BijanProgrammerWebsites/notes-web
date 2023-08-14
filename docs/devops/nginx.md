@@ -5,6 +5,15 @@ description: ''
 
 # NGINX
 
+## Install NGINX on Ubuntu
+
+Simply follow [this tutorial](https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-20-04).
+
+## Get a Free HTTPS Certificate
+
+Visit [certbot website](https://certbot.eff.org/) and choose the web server and system you are using.
+After that, certbot will show you constructions to generate a free certificate.
+
 ## Restart vs Reload
 
 When you change the config file, there are two ways to make them take effect:
