@@ -20,5 +20,5 @@ jobs:
             - name: Move Built Files to Corresponding Folder
               run: |
                   rm -rf /var/www/notes.bijanprogrammer.com/html/web
-                  mkdir /var/www/notes.bijanprogrammer.com/html/web
+                  mkdir -p /var/www/notes.bijanprogrammer.com/html/web
                   mv build/* /var/www/notes.bijanprogrammer.com/html/web
