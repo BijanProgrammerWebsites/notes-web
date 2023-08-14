@@ -37,3 +37,15 @@ tail -1 /var/log/nginx/access.log
 ```shell title="Error Log"
 tail -1 /var/log/nginx/error.log
 ```
+
+---
+
+## Location Blocks Priorities
+
+If there is more than one location block that can satisfy the URL,
+NGINX will choose the one that comes first in this list:
+
+1. Exact Match (`location = /some/path`)
+2. Preferential Prefix Match (`location ^~ /some/path`)
+3. Regex Match (`location ~* /some/.*/path`)
+4. Prefix Match (`location /some/path`)
