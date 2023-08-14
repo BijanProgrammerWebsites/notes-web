@@ -18,6 +18,9 @@ function HomepageHeader() {
                     <Link className="button button--secondary button--lg" to="/docs/category/frontend">
                         Frontend
                     </Link>
+                    <Link className="button button--secondary button--lg" to="/docs/category/devops">
+                        DevOps
+                    </Link>
                 </div>
             </div>
         </header>
