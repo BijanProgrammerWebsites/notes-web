@@ -14,9 +14,9 @@ so runner cannot find it.
 To fix this, create a soft link for each command that is being used:
 
 ```shell
-sudo ln -s "$NVM_DIR/versions/node/$(node_version)/bin/node" "/usr/local/bin/node"
-sudo ln -s "$NVM_DIR/versions/node/$(node_version)/bin/npm" "/usr/local/bin/npm"
-sudo ln -s "$NVM_DIR/versions/node/$(node_version)/bin/pm2" "/usr/local/bin/pm2"
+sudo ln -s "$NVM_DIR/versions/node/$(nvm version)/bin/node" "/usr/local/bin/node"
+sudo ln -s "$NVM_DIR/versions/node/$(nvm version)/bin/npm" "/usr/local/bin/npm"
+sudo ln -s "$NVM_DIR/versions/node/$(nvm version)/bin/pm2" "/usr/local/bin/pm2"
 ```
 
 ## Job Successfully Runs But pm2 Doesn't Start The Process
