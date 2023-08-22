@@ -18,7 +18,7 @@ box.style.backgroundColor = 'green';
 
 ## Options Parameter with Default Values
 
-You can declare options parameter for your function in
+You can declare _options_ parameter for your function in
 [several ways](https://www.delftstack.com/howto/typescript/typescript-default-parameter/).
 For example:
 

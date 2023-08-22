@@ -23,7 +23,7 @@ Simply follow [this tutorial](https://www.digitalocean.com/community/tutorials/h
     ln -s /etc/nginx/sites-available/$(domain) /etc/nginx/sites-enabled/$(domain)
     ```
 8. Make sure the domain has been registered by visiting it and seeing if it returns NGINX default page.  
-   You can also visit [nic.ir](https://nic.ir/) and check if it status is changed from `Reserved` to `Registered`.  
+   You can also visit [nic.ir](https://nic.ir/) and check if its status is changed from `Reserved` to `Registered`.  
    It may take a while, so be patient.
 9. Generate HTTPS certificate using [this tutorial](#get-a-free-https-certificate).
 10. Create a `$(domain).ssl.conf` file in `/etc/nginx/common-configs/`.

@@ -14,7 +14,7 @@ It's useful for `Intl` stuff.
 
 ## Default Values for Destructured Objects
 
-You can destructure an object and give default values to each individual entry:
+You can destructure an object and give default values to each entry:
 
 ```javascript
 const {name = 'Bijan', age = 20} = user;
@@ -65,7 +65,7 @@ Bitwise OR is sometimes useful
 
 ---
 
-## Directly Access Element by It's ID
+## Directly Access Element by Its ID
 
 You can access an element that has an id directly on the `globalThis` object;
 So you don't need to use `getElementById` method.
