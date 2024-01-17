@@ -39,6 +39,11 @@ Simply follow [this tutorial](https://www.digitalocean.com/community/tutorials/h
 Visit [certbot website](https://certbot.eff.org/) and choose the web server and system you are using.
 After that, certbot will show you constructions to generate a free certificate.
 
+## Enable Gzip
+
+DigitalOcean has a great [article](https://www.digitalocean.com/community/tutorials/how-to-improve-website-performance-using-gzip-and-nginx-on-ubuntu-20-04)
+that explains this very well.
+
 ## Restart vs Reload
 
 When you change the config file, there are two ways to make them take effect:
