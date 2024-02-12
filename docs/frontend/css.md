@@ -51,3 +51,31 @@ And simply use them like this:
     grid-column: main;
 }
 ```
+
+---
+
+## Ignore Specific Children Height
+
+If you have a parent element that has some children,
+and you want to set its height based on some specific children and ignore others,
+you can use this trick:
+
+```html
+<div class="parent">
+    <div class="consider">...</div>
+    <div class="ignore">...</div>
+</div>
+```
+
+```css
+.parent {
+    display: grid;
+}
+
+.ignore {
+    min-height: 100%;
+    height: 0;
+}
+```
+
+[Credit](https://twitter.com/njesenberger/status/1577061637584191489)
