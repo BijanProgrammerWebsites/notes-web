@@ -49,3 +49,9 @@ Add `host` argument to `start` script of `package.json` file:
     }
 }
 ```
+
+:::info
+
+You also need to disable private network firewall in `Windows Security` settings.
+
+:::
